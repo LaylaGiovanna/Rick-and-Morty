@@ -1,8 +1,9 @@
 :root {
   /* --header-footer-background: #130d48; */
-  --header-footer-background: rgb(19 13 72 / 80%);
-  --letter-color: #00AFC8;
-  --hover-color: #59D50E;
+  /* --header-footer-background: rgb(19 13 72 / 90%); */
+  --header-footer-background: rgb(48 47 51 /90%); 
+  --letter-color: #36a845;
+  --hover-color: #36a845;
 }
 
 @font-face {
@@ -12,14 +13,24 @@
     src: url(../font/Zuume\ ExtraBold.ttf);
 }
 
-/*font-family: "Zuume", sans-serif; */
+
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   height: 100vh;
   display: grid;
-  /* grid-template-rows: 100px 1fr; */
+  grid-template-rows: 90px 1fr 50px;
+  grid-template-areas: "content";
+  font-family: "Zuume", sans-serif;
 }
 
+/* section {
+  height: 100vh;
+} */
+/* 
 #root {
   height: 100%;
 }
@@ -27,11 +38,4 @@ body {
 .container {
   width: 100%;
   height: 100%;
-
-}
-
-.texto-principal{
-    font-size: 20px;
-    color: black;
-    font-family: "Zuume", sans-serif;
-}
+} */

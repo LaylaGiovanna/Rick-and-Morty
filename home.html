@@ -1,73 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- LINKS -->
-    <link
-      rel="shortcut icon"
-      href="./recursos/ico/pickle.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/episodios.css" />
-    <link rel="stylesheet" href="./css/planetas.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONT -->
-    <link href="http://fonts.cdnfonts.com/css/zuume" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins&display=swap" rel="stylesheet" />
-    />
-    <link rel="stylesheet" href="./font/Zuume ExtraBold.ttf">
+  <!-- LINKS -->
+  <link rel="shortcut icon" href="./recursos/ico/pickle.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/episodios.css">
+  <link rel="stylesheet" href="./css/planetas.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/footer.css">
 
-    <!-- SCRIPTS -->
-    <script src="./js/app.js" defer type="module"></script>
+  <!-- SCRIPTS -->
+  <script src="https://kit.fontawesome.com/aff2bef688.js" crossorigin="anonymous"></script>
+  <script src="./js/app.js" defer type="module"></script>
 
-    <title>Rick and Morty</title>
-  </head>
-  <body>
-    <header>
-      <div class="menu">
-        <div class="menu-container-left">
-          <div class="img-left">
-            <img
-              src="./recursos/image/nave-espacial.png"
-              alt="Imagem de nave espacial do menu"
-            />
-          </div>
+  <title>Rick and Morty</title>
 
-          <div class="img-right">
-            <img
-              src="./recursos/image/icone-rick-and-morty.png"
-              alt="Icone do Rick and Morty do menu"
-            />
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="menu-container-left">
+        <div class="img-left">
+          <img src="./recursos/image/nave-espacial.png" alt="Imagem de nave espacial do menu" />
+        </div>
+
+        <div class="img-right">
+          <img src="./recursos/image/icone-rick-and-morty.png" alt="Icone do Rick and Morty do menu" />
+        </div>
+      </div>
+
+      <nav class="menu-container-right">
+        <li>
+          <a href="./home.html"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="./pages/episodios.html"><span>Episódios</span></a>
+        </li>
+        <li>
+          <a href="./pages/planetas.html"><span>Planetas</span></a>
+        </li>
+      </nav>
+    </div>
+  </header>
+
+  <main id="root">
+    <section class="home" id="home">
+      <div class="content-home">
+        <div class="home__text">
+          <h1 class="text__title">Rick <span>and</span> <br> Morty</h1>
+          <div class="pickle">
+            <img src="./recursos/image/pickle.png" alt="">
           </div>
         </div>
 
-        <nav class="menu-container-right">
-          <li>
-            <a href="./home.html"><span>Home</span></a>
-          </li>
-          <li>
-            <a href="./pages/episodios.html"><span>Episódios</span></a>
-          </li>
-        </nav>
+        <div class="image__home">
+          <img src="./recursos/image/rick_and_morty_portal.png" alt="Imagem de centro do Rick and Morty">
+        </div>
+
+        <div class="buttons__home">
+          <button>Episódios</button>
+          <button>Episódios</button>
+        </div>
+
       </div>
-    </header>
+    </section>
 
-    <main id="root">
-      <!-- <div class="background-main" id="background-main">
-            <img src="./recursos/image/background_rick_and_morty.png" alt="">
-        </div> -->
-        <h1 class="texto-principal">Rick &</h1>
-    </main>
+  </main>
 
-    <footer>
-      <nav class="menu-footer">
-        <a href="./pages/planetas.html"></a>
-      </nav>
-    </footer>
-  </body>
+  <footer>
+    <div class="menu__footer">
+      <div class="menu__footer__left">
+        <li class="social">
+          <i class="fa-brands fa-github fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-instagram fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-telegram fa-fade" style="color: #fff;"></i>
+        </li>
+      </div>
+
+      <div class="menu__footer__right">
+        <span>Todos os direitos reservados 2023 | Desenvolvido por Layla Giovanna</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
