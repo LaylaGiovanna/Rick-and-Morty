@@ -8,6 +8,7 @@ footer {
     position: absolute;
     background-color: var(--header-footer-background);
 }
+
 .menu__footer {
     display: flex;
     align-items: center;

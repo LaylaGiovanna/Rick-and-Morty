@@ -6,7 +6,7 @@ header {
     z-index: 999;
     justify-content: space-between;
     background-color: var(--header-footer-background);
-  }
+}
   
   .menu {
     display: flex;
@@ -42,7 +42,16 @@ header {
     padding-left: 50px;
     padding-right: 50px;
   }
-  
+
+  .arrows__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: 100%;
+    font-size: 40px;
+  }
+
   .menu-container-right span {
     color: var(--letter-color);
     font-size: 46px;
