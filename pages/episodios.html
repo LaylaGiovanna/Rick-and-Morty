@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- LINKS -->
-<link rel="shortcut icon" href="../recursos/ico/pickle.ico" type="image/x-icon">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/home.css">
-<link rel="stylesheet" href="../css/episodios.css">
-<link rel="stylesheet" href="../css/planetas.css">
-<link rel="stylesheet" href="../css/menu.css">
-<link rel="stylesheet" href="../css/footer.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LINKS -->
+  <link rel="shortcut icon" href="../recursos/ico/pickle.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/episodios.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/footer-episodes.css">
 
-<!-- SCRIPTS -->
-<script src="https://kit.fontawesome.com/aff2bef688.js" crossorigin="anonymous"></script>
-<script src="../js/app.js" defer type="module"></script>
-<script src="../js/home.js"></script>
+  <!-- SCRIPTS -->
+  <script src="https://kit.fontawesome.com/aff2bef688.js" crossorigin="anonymous"></script>
+  <script src="../js/app.js" defer type="module"></script>
 
-<title>Rick and Morty - Episódios</title>
+  <title>Rick and Morty - Episódios</title>
 
 </head>
 
 <body>
-<header>
+  <header>
   <div class="menu">
     <div class="menu-container-left">
       <div class="img-left">
@@ -38,59 +36,80 @@
 
     <nav class="menu-container-right">
       <li>
-        <a href="../home.html"><span>Home</span></a>
+        <a href="./home.html"><span>Home</span></a>
       </li>
       <li>
-        <a href="../pages/episodios.html"><span>Episódios</span></a>
+        <a href="./pages/episodios.html"><span>Episodes</span></a>
       </li>
       <li>
-        <a href="../pages/planetas.html"><span>Planetas</span></a>
+        <a href="./pages/planetas.html"><span>Location</span></a>
       </li>
 
       <div class="arrows__menu">
-        <button id="btnVoltar" type="button">
             <i class="fa-solid fa-circle-arrow-left" style="color: #36a845;"></i>
-        </button>
-        <button>
             <i class="fa-solid fa-circle-arrow-right" style="color: #36a845;"></i>
-
-        </button>
-
       </div>
     </nav>
   </div>
 </header>
 
-<main id="root">
-  <section class="home" id="home">
-    <div class="content-home">
+  <main id="root">
+    <section class="episodios" id="episodios">
 
+
+        <div class="container-card">
+          <script src="../js/card-characters.js" defer></script>
+
+          <div class="container">
+            <h1>Episodes</h1>
+            <div class="filter-container">
+              <label for="episode-select">Select Episode:</label>
+              <select id="episode-select">
+                <option value="" selected disabled hidden>Select an Episode</option>
+              </select>
+            </div>
+            
+            <div class="characters"></div>
+            
+            <div class="episode-container">
+              <!-- <div id="episode-info">
+                <h2 id="episode-name"></h2>
+                <p id="episode-air-date"></p>
+                <p id="episode-episode"></p>
+                <p id="episode-characters"></p>
+              </div> -->
+              <div id="character-cards">
+              </div>
+            </div>
+          </div>          
+        </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="menu__footer">
+      <div class="menu__footer__left">
+        <li class="social">
+          <i class="fa-brands fa-github fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-instagram fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-telegram fa-fade" style="color: #fff;"></i>
+        </li>
+      </div>
+
+      <div class="menu__footer__right">
+        <span>Todos os direitos reservados 2023 | Desenvolvido por Layla Giovanna</span>
+      </div>
     </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="menu__footer">
-    <div class="menu__footer__left">
-      <li class="social">
-        <i class="fa-brands fa-github fa-fade" style="color: #fff;"></i>
-      </li>
-
-      <li class="social">
-        <i class="fa-brands fa-instagram fa-fade" style="color: #fff;"></i>
-      </li>
-
-      <li class="social">
-        <i class="fa-brands fa-telegram fa-fade" style="color: #fff;"></i>
-      </li>
-    </div>
-
-    <div class="menu__footer__right">
-      <span>Todos os direitos reservados 2023 | Desenvolvido por Layla Giovanna</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
