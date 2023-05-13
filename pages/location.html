@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- LINKS -->
+  <link rel="shortcut icon" href="../recursos/ico/pickle.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/footer-episodes.css">
+  <link rel="stylesheet" href="../css/location.css">
+
+  <!-- SCRIPTS -->
+  <script src="https://kit.fontawesome.com/aff2bef688.js" crossorigin="anonymous"></script>
+  <script src="../js/app.js" defer type="module"></script>
+
+  <title>Rick and Morty - Episódios</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="menu-container-left">
+        <div class="img-left">
+          <img src="../recursos/image/nave-espacial.png" alt="Imagem de nave espacial do menu" />
+        </div>
+
+        <div class="img-right">
+          <img src="../recursos/image/icone-rick-and-morty.png" alt="Icone do Rick and Morty do menu" />
+        </div>
+      </div>
+
+      <nav class="menu-container-right">
+        <li>
+          <a href="./home.html"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="./episodes.html"><span>Episodes</span></a>
+        </li>
+        <li>
+          <a href="./location.html"><span>Location</span></a>
+        </li>
+
+        <div class="arrows__menu">
+          <i class="fa-solid fa-circle-arrow-left" style="color: #36a845;"></i>
+          <i class="fa-solid fa-circle-arrow-right" style="color: #36a845;"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="root">
+    <section class="location" id="location">
+
+      <div class="container-card">
+        <script src="../js/card-location.js" defer></script>
+
+        <div class="container">
+          <h1>Location - <span id="location-name"></span></h1>
+          <div class="filter-container">
+            <label for="location-select">Select a Location:</label>
+            <select id="location-select">
+              <option value="" selected disabled hidden>Select a Location</option>
+            </select>
+          </div>
+
+          <div class="characters-container"></div>
+        </div>
+
+        <div class="characters"></div>
+            
+            <div class="episode-container">
+              <!-- <div id="episode-info">
+                <h2 id="episode-name"></h2>
+                <p id="episode-air-date"></p>
+                <p id="episode-episode"></p>
+                <p id="episode-characters"></p>
+              </div> -->
+              <div id="character-cards">
+              </div>
+            </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="menu__footer">
+      <div class="menu__footer__left">
+        <li class="social">
+          <i class="fa-brands fa-github fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-instagram fa-fade" style="color: #fff;"></i>
+        </li>
+
+        <li class="social">
+          <i class="fa-brands fa-telegram fa-fade" style="color: #fff;"></i>
+        </li>
+      </div>
+
+      <div class="menu__footer__right">
+        <span>Todos os direitos reservados 2023 | Desenvolvido por Layla Giovanna</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

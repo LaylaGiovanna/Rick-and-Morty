@@ -1,27 +1,27 @@
-const episodeSelect = document.getElementById("episode-select");
-const charactersContainer = document.querySelector(".characters");
-const filter = document.querySelector("#filter");
-const episodeList = document.querySelector("#episode-list");
-let episodes = [];
+const locationSelect = document.getElementById("location-select");
+const charactersContainer = document.querySelector(".characters-container");
+const title = document.querySelector("h1");
 
-// function to fetch all episodes
-async function fetchEpisodes() {
-    let episodes = [];
+let locations = [];
+
+// function to fetch all locations
+async function fetchLocations() {
+    let locations = [];
     let nextPage = 1;
     while (nextPage !== null) {
-        const response = await fetch(`https://rickandmortyapi.com/api/episode?page=${nextPage}`);
+        const response = await fetch(`https://rickandmortyapi.com/api/location?page=${nextPage}`);
         const data = await response.json();
-        episodes = episodes.concat(data.results);
+        locations = locations.concat(data.results);
         nextPage = data.info.next ? new URL(data.info.next).searchParams.get("page") : null;
     }
-    return episodes;
+    return locations;
 }
 
-// function to fetch characters by episode id
-async function fetchCharactersByEpisodeId(episodeId) {
-    const response = await fetch(`https://rickandmortyapi.com/api/episode/${episodeId}`);
+// function to fetch characters by location id
+async function fetchCharactersByLocationId(locationId) {
+    const response = await fetch(`https://rickandmortyapi.com/api/location/${locationId}`);
     const data = await response.json();
-    const characterIds = data.characters.map((url) => url.split("/").pop());
+    const characterIds = data.residents.map((url) => url.split("/").pop());
     const characters = await Promise.all(
         characterIds.map(async (id) => {
             const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
@@ -63,7 +63,6 @@ function createCharacterCard(character) {
     return card;
 }
 
-
 // function to render characters
 function renderCharacters(characters) {
     charactersContainer.innerHTML = "";
@@ -73,29 +72,29 @@ function renderCharacters(characters) {
     });
 }
 
-// initialize filter and render first episode characters
-fetchEpisodes().then((episodes) => {
-    const episodeOptions = episodes.map((episode) => {
+// initialize filter and render first location characters
+fetchLocations().then((locations) => {
+    const locationOptions = locations.map((location) => {
         const option = document.createElement("option");
-        option.value = episode.id;
-        option.textContent = `Episode - ${episode.name}`;
+        option.value = location.id;
+        option.textContent = location.name;
         return option;
     });
-    
-    
-    episodeSelect.append(...episodeOptions);
-    
 
-    const firstEpisodeId = episodes[0].id;
-    fetchCharactersByEpisodeId(firstEpisodeId).then((characters) => {
+    locationSelect.append(...locationOptions);
+
+    const firstLocationId = locations[0].id;
+    fetchCharactersByLocationId(firstLocationId).then((characters) => {
         renderCharacters(characters);
+        title.textContent = `Location - ${locations.find(loc => loc.id == firstLocationId).name}`;
     });
 });
 
-// event listener for episode select change
-episodeSelect.addEventListener("change", (event) => {
-    const episodeId = event.target.value;
-    fetchCharactersByEpisodeId(episodeId).then((characters) => {
+// event listener for location select change
+locationSelect.addEventListener("change", (event) => {
+    const locationId = event.target.value;
+    fetchCharactersByLocationId(locationId).then((characters) => {
         renderCharacters(characters);
+        title.textContent = `Location - ${locations.find(loc => loc.id == locationId).name}`;
     });
 });

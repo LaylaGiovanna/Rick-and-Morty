@@ -1,30 +1,38 @@
 /* 'use strict'
 
+import { createPersonalInformation } from './personal-information.js'
+
 const routes = {
-    '/': 'home.html',
-    '/episodios': '/pages/episodios.html',
-    '/planetas': '/pages/planetas.html'
+    "/": "/index.html",
+    '/sun': '/pages/sun.html',
+    '/planets': '/pages/planets.html',
+    '/selected-planet': '/pages/selected-planet.html'
 }
 
-const route = async() => {
+export const route = async () => {
     window.event.preventDefault()
     window.history.pushState({}, "", window.event.target.href)
+    // console.log(window.location.pathname);
 
     const path = window.location.pathname
-
+    // console.log(path);
     const route = routes[path]
 
     const response = await fetch(route)
     const html = await response.text()
 
+    // console.log(route);
+
     document.getElementById('root').innerHTML = html
 
+    createPersonalInformation()
+    if (path == '/sun') {
+        loadSun()
+    } else if (path == '/planets') {
+        loadAllPlanets()
+    } else if (path == '/selected-planet') {
+        loadPlanet()
+    }
 }
 
-
-
-
-// const teste = document.getElementById('#home')
-// teste.addEventListener('click', handleClick)
-
-window.route = route */
+window.route = route; */
