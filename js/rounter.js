@@ -3,10 +3,10 @@
 import { createPersonalInformation } from './personal-information.js'
 
 const routes = {
-    "/": "/index.html",
-    '/sun': '/pages/sun.html',
-    '/planets': '/pages/planets.html',
-    '/selected-planet': '/pages/selected-planet.html'
+    "/": "/home.html",
+    '/': '/pages/',
+    '/': '/pages/',
+    '/': '/pages/'
 }
 
 export const route = async () => {

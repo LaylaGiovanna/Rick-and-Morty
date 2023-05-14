@@ -22,12 +22,16 @@ main {
   padding-top: 90px;
   padding-bottom: 90px;
   gap: 10px;
+  min-width:380px ;
+
 }
 
 .container {
-  min-width: 850px;
+  min-width: 900px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -105,6 +109,7 @@ select {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  align-self: center;
 }
 
 .character-card {
@@ -114,6 +119,11 @@ select {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  min-width: 380px ;
+}
+
+.character-card img{
+  align-self: center;
 }
 .character-card:hover {
   transform: scale(1.1);
@@ -160,12 +170,15 @@ img {
 
 .characters {
   display: grid;
-  width: 100%;
+  align-items: center;
+  width: 90%;
   height: fit-content;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-wrap: wrap;
   grid-gap: 20px;
   gap: 50px;
   padding-top: 32px;
+  flex-wrap: wrap;
 }
 
 /* @media (max-width: 600px) {

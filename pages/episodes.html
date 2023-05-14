@@ -16,6 +16,7 @@
   <!-- SCRIPTS -->
   <script src="https://kit.fontawesome.com/aff2bef688.js" crossorigin="anonymous"></script>
   <script src="../js/app.js" defer type="module"></script>
+  <script src="../js/card-characters.js" defer></script>
 
   <title>Rick and Morty - Episódios</title>
 
@@ -45,9 +46,10 @@
         <a href="./location.html"><span>Location</span></a>
       </li>
 
-      <div class="arrows__menu">
-            <i class="fa-solid fa-circle-arrow-left" style="color: #36a845;"></i>
-            <i class="fa-solid fa-circle-arrow-right" style="color: #36a845;"></i>
+      <div class="arrow__menu">
+        <button class="back-page" onclick="window.history.back()">
+          <i class="fa-solid fa-circle-arrow-left" style="color: #36a845;"></i>
+        </button>
       </div>
     </nav>
   </div>
@@ -61,23 +63,17 @@
           <script src="../js/card-characters.js" defer></script>
 
           <div class="container">
-            <h1>Episodes</h1>
+            <h1 id="page-title">Episodes - </h1>
             <div class="filter-container">
               <label for="episode-select">Select Episode:</label>
               <select id="episode-select">
                 <option value="" selected disabled hidden>Select an Episode</option>
               </select>
-            </div>
+            </div>  
             
             <div class="characters"></div>
             
             <div class="episode-container">
-              <!-- <div id="episode-info">
-                <h2 id="episode-name"></h2>
-                <p id="episode-air-date"></p>
-                <p id="episode-episode"></p>
-                <p id="episode-characters"></p>
-              </div> -->
               <div id="character-cards">
               </div>
             </div>
@@ -100,8 +96,7 @@
         </li>
 
         <li class="social">
-          <i class="fa-brands fa-telegram fa-fade" style="color: #fff;"></i>
-        </li>
+          <i class="fa-solid fa-envelope fa-fade" style="color: #fff;"></i>        </li>
       </div>
 
       <div class="menu__footer__right">

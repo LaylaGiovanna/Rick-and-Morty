@@ -4,6 +4,7 @@ const filter = document.querySelector("#filter");
 const episodeList = document.querySelector("#episode-list");
 let episodes = [];
 
+
 // function to fetch all episodes
 async function fetchEpisodes() {
     let episodes = [];
@@ -56,22 +57,29 @@ function createCharacterCard(character) {
     }
     card.appendChild(status);
 
+    
     const location = document.createElement("p");
     location.textContent = `Location: ${character.location.name}`;
     card.appendChild(location);
+    
 
     return card;
 }
 
 
 // function to render characters
-function renderCharacters(characters) {
+function renderCharacters(characters, episodeName) {
     charactersContainer.innerHTML = "";
     characters.forEach((character) => {
         const card = createCharacterCard(character);
         charactersContainer.appendChild(card);
     });
+    const pageTitle = document.querySelector("#page-title");
+    pageTitle.textContent = `Episode - ${episodeName}`;
+
+    
 }
+
 
 // initialize filter and render first episode characters
 fetchEpisodes().then((episodes) => {
@@ -79,23 +87,28 @@ fetchEpisodes().then((episodes) => {
         const option = document.createElement("option");
         option.value = episode.id;
         option.textContent = `Episode - ${episode.name}`;
+
         return option;
     });
-    
-    
+
+
     episodeSelect.append(...episodeOptions);
-    
+
 
     const firstEpisodeId = episodes[0].id;
+    const firstEpisodeName = episodes[0].name;
     fetchCharactersByEpisodeId(firstEpisodeId).then((characters) => {
-        renderCharacters(characters);
+        renderCharacters(characters, firstEpisodeName);
     });
 });
 
 // event listener for episode select change
 episodeSelect.addEventListener("change", (event) => {
     const episodeId = event.target.value;
+    const episodeName = event.target.options[event.target.selectedIndex].textContent.split(" - ")[1];
     fetchCharactersByEpisodeId(episodeId).then((characters) => {
-        renderCharacters(characters);
+        renderCharacters(characters, episodeName);
     });
 });
+
+
