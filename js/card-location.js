@@ -6,7 +6,7 @@ let locations = [];
 
 // function to fetch all locations
 async function fetchLocations() {
-    let locations = [];
+
     let nextPage = 1;
     while (nextPage !== null) {
         const response = await fetch(`https://rickandmortyapi.com/api/location?page=${nextPage}`);

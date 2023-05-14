@@ -1,5 +1,4 @@
-/* 'use strict'
+'use strict'
 
-import './router.js'
+import './rounter.js'
 
- */
