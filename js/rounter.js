@@ -1,5 +1,3 @@
-'use strict'
-
 const routes = {
     '/episodes': '/pages/episodes.html',
     '/locations': '/pages/location.html'
@@ -20,4 +18,4 @@ const route = async() => {
 
 }
 
-window.route = route;
+window.route = route

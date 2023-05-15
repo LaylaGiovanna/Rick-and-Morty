@@ -38,3 +38,9 @@ footer {
     font-size: 20px;
     letter-spacing: 2px;
 }
+
+@media (max-width: 640px) {
+    footer{
+      display: none;
+    }
+  }

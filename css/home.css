@@ -48,11 +48,8 @@ main {
 .text__title span {
   font-size: 70px;
   color: white;
-  text-shadow: 
-  -1px -1px 0px var(--letter-color),
-  -1px 1px 0px var(--letter-color), 
-  1px -1px 0px var(--letter-color),
-  1px 0px 0px var(--letter-color);
+  text-shadow: -1px -1px 0px var(--letter-color), -1px 1px 0px var(--letter-color), 1px -1px 0px var(--letter-color),
+    1px 0px 0px var(--letter-color);
 }
 
 .pickle {
@@ -79,16 +76,35 @@ main {
   width: 560px;
 }
 
-.buttons__home {
-  grid-area: button;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-.buttons__home button {
-  width: 90px;
-  height: 40px;
-  border-radius: 20px;
-  text-decoration: none;
-  border: none;
+@media screen and (max-width: 640px) {
+  .content-home {
+    width: 90%;
+    grid-template-areas:
+      "text"
+      "image"
+      "button";
+  }
+
+  .home__text {
+    margin-top: 60px;
+    font-size: 50px;
+  }
+  
+  .text__title span {
+    font-size: 40px;
+  }
+
+  .image__home {
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+  }
+  .image__home img {
+    height: 320px;
+    width: 320px;
+  }
+
+  .pickle {
+    padding-bottom: 30px;
+  }
 }
