@@ -3,11 +3,8 @@
 ![print-readme]()
 
 
-[Clique aqui](https://website-rickandmorty.netlify.app/) para acessar o site.
-https://website-rickandmorty.netlify.app/
+[Clique aqui](https://website-rickandmorty.netlify.app) para acessar o site.
 
-
-![netsolutions](https://user-images.githubusercontent.com/42476943/236190098-91455210-eb6c-4efc-bd19-3dcb7618adc3.png)
 
 ## Situação de Aprendizagem
 
@@ -59,16 +56,16 @@ sistema.
 <summary><h2>Critérios de avaliação</h2></summary>
 
 - [ ]  Documentou problemas, se encontrado, para futuras consultas?
-- [X]  Foi criado o layout no figma?
-- [X]  A página foi construída seguindo o planejado no Figma?
+- [x]  Foi criado o layout no figma?
+- [x]  A página foi construída seguindo o planejado no Figma?
 - [ ]  A página funciona em dispositivos diferentes?
-- [X]  Foi consumida a API escolhida?
-- [X]  Foi criado web componentes?
-- [ ]  Foi criado um padrão de roteamente para as paginas?
-- [X]  As funções foram criadas seguindo à boa prática de responsabilidade única?
-- [X]  Quando possível, foi criado funções puras?
-- [X]  O projeto está publicado?
-- [X]  Foi criado o arquivo README.md?
+- [x]  Foi consumida a API escolhida?
+- [x]  Foi criado web componentes?
+- [x]  Foi criado um padrão de roteamente para as paginas?
+- [x]  As funções foram criadas seguindo à boa prática de responsabilidade única?
+- [x]  Quando possível, foi criado funções puras?
+- [x]  O projeto está publicado?
+- [x]  Foi criado o arquivo README.md?
 
 </details>
 
