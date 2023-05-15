@@ -1,3 +1,8 @@
+'use strict'
+
+const { loadEpisodes } = require("./card-characters")
+const { loadLocation } = require("./card-location")
+
 const routes = {
     '/episodes': '/pages/episodes.html',
     '/locations': '/pages/location.html'
@@ -15,6 +20,13 @@ const route = async() => {
     const html = await response.text()
 
     document.getElementById('root').innerHTML = html
+
+    
+    if(path == '/episodes'){
+        loadEpisodes()
+    } else if (path == '/locations'){
+        loadLocation()
+    } 
 
 }
 

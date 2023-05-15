@@ -98,3 +98,11 @@ locationSelect.addEventListener("change", (event) => {
         title.textContent = `Location - ${locations.find(loc => loc.id == locationId).name}`;
     });
 });
+
+
+export const loadLocation = () =>{
+    fetchLocations(),
+    fetchCharactersByLocationId(),
+    createCharacterCard(),
+    renderCharacters()
+}

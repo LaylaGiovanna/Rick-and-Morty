@@ -111,3 +111,10 @@ episodeSelect.addEventListener("change", (event) => {
     });
 });
 
+
+export const loadEpisodes = () =>{
+    fetchEpisodes(),
+    fetchCharactersByEpisodeId(),
+    createCharacterCard(),
+    renderCharacters()
+}
